@@ -70,7 +70,7 @@ Transform:
   - {fileID: 3386300599564012475}
   - {fileID: 7736994331657868393}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7736994330992178546
 Rigidbody:
@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 7736994331431151466}
   - component: {fileID: 7736994331430381426}
   - component: {fileID: 7736994331429381554}
+  - component: {fileID: 5985726131387032471}
   m_Layer: 6
   m_Name: 2Hand-Sword
   m_TagString: Untagged
@@ -343,6 +344,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5985726131387032471
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7736994331431385866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1, z: 5}
+  m_Center: {x: -0.17672974, y: -0.07667185, z: 0.911276}
 --- !u!1 &7736994331657868394
 GameObject:
   m_ObjectHideFlags: 0
