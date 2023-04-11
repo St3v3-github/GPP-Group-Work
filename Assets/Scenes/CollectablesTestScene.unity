@@ -481,10 +481,6 @@ PrefabInstance:
       propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 564504850}
-    - target: {fileID: 7736994330986778810, guid: 36aaa4c077a7a7f479a945ab2a5f434e, type: 3}
-      propertyPath: OnCoinCollected.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateCoinText
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 36aaa4c077a7a7f479a945ab2a5f434e, type: 3}

@@ -7,19 +7,12 @@ public class AnimatorManager : MonoBehaviour
     public Animator animator;
     int horizontal;
     int vertical;
-    //int jumpBool;
-    //int groundedBool;
     int attackBool;
-    //int fallBool;
     public void Awake()
     {
         animator = GetComponent<Animator>();
         horizontal = Animator.StringToHash("Horizontal");
         vertical = Animator.StringToHash("Vertical");
-        //jumpBool = Animator.StringToHash("isJumping");
-        //groundedBool = Animator.StringToHash("isGrounded");
-       // attackBool = Animator.StringToHash("isAttacking");
-        //fallBool = Animator.StringToHash("isFalling");
     }
 
     public void PlayTargetAnimation(string targetAnimation, bool isInteracting)
@@ -79,32 +72,4 @@ public class AnimatorManager : MonoBehaviour
 
 
     }
-
-   // public void UpdateJump(bool isJumping = false, bool isGrounded = true)
-   // {
-   //     if (isJumping)
-   //     {
-   //         animator.SetBool(jumpBool, true);
-   //         animator.SetBool(groundedBool, false);
-   //     }
-
-   //     if(!isJumping && !isGrounded)
-   //     {
-   //         animator.SetBool(fallBool, true);
-   //     }
-
-   //     if(!isJumping && isGrounded)
-   //     {
-   //         animator.SetBool(groundedBool, true);
-   //         animator.SetBool(jumpBool, false);
-   //     }
-   // }
-  //  public void UpdateAttack(bool attacking = false)
-  //  {
-  //      if(attacking)
-  //      {
-  //          animator.SetBool(attackBool, true);
-  //      }
-
-   // }
 }
