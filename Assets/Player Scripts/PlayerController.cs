@@ -58,6 +58,8 @@ public class PlayerController : MonoBehaviour
     public bool isDead;
     public bool isDeadAnimComplete;
 
+    bool switchCollide = false;
+
     private void Awake()
     {
         playerRigidbody = GetComponent<Rigidbody>();
@@ -313,5 +315,6 @@ public class PlayerController : MonoBehaviour
         isDead = false;
         animator.SetBool("isDead", false);
     }
+
 
 }
