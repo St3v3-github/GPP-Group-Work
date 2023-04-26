@@ -5,6 +5,9 @@ using UnityEngine;
 public class SetUpCams : MonoBehaviour
 {
     public Camera MainCam;
+   // public Camera panelTriggeredCam;
+    public Camera shakeCam;
+    public Camera explosionCam;
    /* public Camera DoorCam;
     public Camera MoveUpCam;
     public Camera StaticSetPCam;
@@ -14,6 +17,9 @@ public class SetUpCams : MonoBehaviour
     void Start()
     {
         MainCam.enabled = true;
+        //panelTriggeredCam.enabled = false;
+        shakeCam.enabled = false;
+        explosionCam.enabled = false;
 
         /*
         DoorCam.enabled = false;
@@ -24,9 +30,4 @@ public class SetUpCams : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
