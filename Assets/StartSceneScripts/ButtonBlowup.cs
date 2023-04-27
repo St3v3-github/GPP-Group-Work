@@ -8,7 +8,11 @@ public class ButtonBlowup : MonoBehaviour
     public Material myMat;
     public ParticleSystem effect;
     bool explode = false;
-    float timer = 3f;
+    float timer = 4.5f;
+    public GameObject cutSceneCam;
+    public Camera maincam;
+    bool cutscene = false;
+    public GameObject text;
 
     // Start is called before the first frame update
     void Start()
@@ -40,8 +44,13 @@ public class ButtonBlowup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && !cutscene)
         {
+            text.SetActive(false);
+            cutscene = true;
+            cutSceneCam.SetActive(true);
+            maincam.enabled = false;
+            cutSceneCam.GetComponentInChildren<Camera>().enabled = true;
             explode = true;
             myMat.color = Color.green;
         }
