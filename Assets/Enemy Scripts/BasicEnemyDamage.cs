@@ -9,6 +9,7 @@ public class BasicEnemyDamage : MonoBehaviour
     PlayerController playerController;
     public GameObject sword;
     public GameObject basicEnemy;
+    public GameObject basicEnemyParticles;
     public bool hasAttacked = false;
     public float delay = 1;
 
@@ -26,6 +27,9 @@ public class BasicEnemyDamage : MonoBehaviour
 
         if (health <= 0)
         {
+            basicEnemyParticles.transform.SetParent(null);
+            basicEnemyParticles.SetActive(true);
+
             Debug.Log("dead");
             basicEnemy.SetActive(false);
 

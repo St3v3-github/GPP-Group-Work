@@ -22,6 +22,15 @@ public class EnemyDamageController : MonoBehaviour
     public GameObject split31;
     public GameObject split32;
 
+    //Split Particles
+    public GameObject baseParticles;
+    public GameObject split11Particles;
+    public GameObject split12Particles;
+    public GameObject split21Particles;
+    public GameObject split22Particles;
+    public GameObject split31Particles;
+    public GameObject split32Particles;
+
     public GameObject Split1;
 
     //rewards
@@ -35,6 +44,9 @@ public class EnemyDamageController : MonoBehaviour
 
         if (baseHealth <= 0)
         {
+            baseParticles.transform.SetParent(null);
+            baseParticles.SetActive(true);
+
             Debug.Log("Split");
             //set smaller 2 to active then repeat in another if()
             Split1.transform.SetParent(null);
@@ -52,6 +64,9 @@ public class EnemyDamageController : MonoBehaviour
 
         if (split11Health <= 0)
         {
+            split11Particles.transform.SetParent(null);
+            split11Particles.SetActive(true);
+
             split21.transform.SetParent(null);
             split31.transform.SetParent(null);
             split11.SetActive(false);
@@ -67,6 +82,9 @@ public class EnemyDamageController : MonoBehaviour
 
         if (split12Health <= 0)
         {
+            split12Particles.transform.SetParent(null);
+            split12Particles.SetActive(true);
+
             split22.transform.SetParent(null);
             split32.transform.SetParent(null);
             split12.SetActive(false);
@@ -100,6 +118,9 @@ public class EnemyDamageController : MonoBehaviour
 
         if (split21Health <= 0)
         {
+            split21Particles.transform.SetParent(null);
+            split21Particles.SetActive(true);
+
             reward1.transform.SetParent(null);
             split21.SetActive(false);
 
@@ -114,6 +135,9 @@ public class EnemyDamageController : MonoBehaviour
 
         if (split22Health <= 0)
         {
+            split22Particles.transform.SetParent(null);
+            split22Particles.SetActive(true);
+
             reward2.transform.SetParent(null);
             split22.SetActive(false);
 
@@ -145,6 +169,9 @@ public class EnemyDamageController : MonoBehaviour
 
         if (split31Health <= 0)
         {
+            split31Particles.transform.SetParent(null);
+            split31Particles.SetActive(true);
+
             reward3.transform.SetParent(null);
             split31.SetActive(false);
 
@@ -159,6 +186,9 @@ public class EnemyDamageController : MonoBehaviour
 
         if (split32Health <= 0)
         {
+            split32Particles.transform.SetParent(null);
+            split32Particles.SetActive(true);
+
             reward4.transform.SetParent(null);
             split32.SetActive(false);
 
