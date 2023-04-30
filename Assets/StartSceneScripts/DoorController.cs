@@ -8,24 +8,35 @@ public class DoorController : MonoBehaviour
     [SerializeField] Animator switchAnim;
     [SerializeField] Animator doorAnim;
 
+    public GameObject player;
+    public PlayerController playerref;
+
     bool playerCollide = false;
     bool opening = false;
     bool opened = false;
     float delay = .5f;
     bool press = false;
 
+    private void Start()
+    {
+        playerref = player.GetComponent<PlayerController>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (playerCollide)
+        if (playerref.interact && playerCollide)
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                switchAnim.SetBool("press", true);
-                opening = true;
-                opened = true;
-            }
+            switchAnim.SetBool("press", true);
+            opening = true;
+            opened = true;
+            playerref.interact = false;
         }
+        else if(playerref.interact)
+        {
+            playerref.interact = false;
+        }
+
         if (opened)
         {
             if (opening)

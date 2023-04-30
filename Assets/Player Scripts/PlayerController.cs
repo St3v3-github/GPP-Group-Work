@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour
     public LevelLoader levelLoaderRef;
 
     bool switchCollide = false;
+    public bool interact = false;
 
     private void Awake()
     {
@@ -229,6 +230,15 @@ public class PlayerController : MonoBehaviour
     {
         _input = context.ReadValue<Vector2>();
 
+    }
+
+    public void Interact(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            interact = true;
+            print("interact");
+        }
     }
 
     private void CheckMoveAmount()
