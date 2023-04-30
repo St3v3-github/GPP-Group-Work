@@ -4,6 +4,33 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/OpenWorld.unity
+    guid: 3bcb9585d217e9a488e131d407bc164f
+  - enabled: 1
+    path: Assets/Scenes/BossFight.unity
+    guid: 77e1354985e5f674996eb02b9dc73fb2
+  - enabled: 1
+    path: Assets/Scenes/BossEnemyTestScene.unity
+    guid: 69164dd4beedb134390654200f26482f
+  - enabled: 1
+    path: Assets/Scenes/CollectablesTestScene.unity
+    guid: b8db37ee63acefb458797ab605705ec4
+  - enabled: 1
+    path: Assets/Scenes/PlayerMovementTestScene.unity
+    guid: 9577da156fb9c2c4787929217616300b
+  - enabled: 1
+    path: Assets/Scenes/SplineTestScene.unity
+    guid: 77f21ee4bb7a3e040a49e066585f4cd7
+  - enabled: 1
+    path: Assets/Scenes/SwitchesTestScene.unity
+    guid: 2637eb7b0bd43af46905844812472e2b
+  - enabled: 1
+    path: Assets/Scenes/TestPlatformScene.unity
+    guid: d3b88991355370a42afcdf7476bfb529
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b8ccc411c4eccfa4e9b4517f80fa34af, type: 2}

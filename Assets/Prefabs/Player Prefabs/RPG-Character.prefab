@@ -70,7 +70,7 @@ Transform:
   - {fileID: 3386300599564012475}
   - {fileID: 7736994331657868393}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7736994330992178546
 Rigidbody:
@@ -259,6 +259,8 @@ MonoBehaviour:
   respawnPoint: {fileID: 0}
   isDead: 0
   isDeadAnimComplete: 0
+  transitionOBJ: {fileID: 1247865056558367568, guid: 94c965e0c3d55c34c9863fe5328e2ad3, type: 3}
+  levelLoaderRef: {fileID: 6599366226306012828, guid: 94c965e0c3d55c34c9863fe5328e2ad3, type: 3}
 --- !u!1 &7736994331431385866
 GameObject:
   m_ObjectHideFlags: 0

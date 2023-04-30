@@ -58,6 +58,9 @@ public class PlayerController : MonoBehaviour
     public bool isDead;
     public bool isDeadAnimComplete;
 
+    public GameObject transitionOBJ;
+    public LevelLoader levelLoaderRef;
+
     bool switchCollide = false;
 
     private void Awake()
@@ -70,6 +73,7 @@ public class PlayerController : MonoBehaviour
         animatorManager = GetComponent<AnimatorManager>();
         animator = GetComponent<Animator>();
 
+        levelLoaderRef = transitionOBJ.GetComponent<LevelLoader>();
     }
 
     public void DoubleJump()
@@ -316,5 +320,12 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isDead", false);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "transition")
+        {
+            levelLoaderRef.LoadNextLevel();
+        }
+    }
 
 }
