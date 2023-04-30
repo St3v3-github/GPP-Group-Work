@@ -24,6 +24,7 @@ public class EnemyDamageController : MonoBehaviour
 
     //Split Particles
     public GameObject baseParticles;
+    public GameObject baseParticles2;
     public GameObject split11Particles;
     public GameObject split12Particles;
     public GameObject split21Particles;
@@ -46,6 +47,8 @@ public class EnemyDamageController : MonoBehaviour
         {
             baseParticles.transform.SetParent(null);
             baseParticles.SetActive(true);
+            baseParticles2.transform.SetParent(null);
+            baseParticles2.SetActive(true);
 
             Debug.Log("Split");
             //set smaller 2 to active then repeat in another if()
