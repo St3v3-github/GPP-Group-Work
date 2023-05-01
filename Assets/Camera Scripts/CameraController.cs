@@ -5,6 +5,9 @@ using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
+    SplineManager splineManager;
+    [SerializeField] private GameObject player;
+
     public GameObject target;
     public Vector3 offset;
     private Vector2 camInput;
@@ -39,6 +42,8 @@ public class CameraController : MonoBehaviour
         targetTransform = FindObjectOfType<PlayerController>().transform;
         cameraTransform = Camera.main.transform;
         defaultPosition = cameraTransform.localPosition.z;
+
+        splineManager = FindObjectOfType<SplineManager>();
     }
 
     private void FollowTarget()
@@ -67,9 +72,16 @@ public class CameraController : MonoBehaviour
 
     public void HandleAllCameraMovement()
     {
-        FollowTarget();
-        RotateCamera();
-        CameraCollisions();
+        if (!splineManager.InBox)
+        {
+            FollowTarget();
+            RotateCamera();
+            CameraCollisions();
+        }
+        else
+        {
+            splineRules();
+        }
     }
 
     public void Look(InputAction.CallbackContext context)
@@ -120,4 +132,11 @@ public class CameraController : MonoBehaviour
         cameraTransform.localPosition = cameraVectorPosition;
     }
 
+    private void splineRules()
+    {
+        Vector3 lookAtPosition = player.transform.position + transform.up * 1.8f;
+        var targetRotation = Quaternion.LookRotation(lookAtPosition - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);
+
+    }
 }
