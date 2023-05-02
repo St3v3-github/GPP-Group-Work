@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class CameraController : MonoBehaviour
 {
@@ -72,16 +73,26 @@ public class CameraController : MonoBehaviour
 
     public void HandleAllCameraMovement()
     {
-        if (!splineManager.InBox)
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            if (!splineManager.InBox)
+            {
+                FollowTarget();
+                RotateCamera();
+                CameraCollisions();
+            }
+            else
+            {
+                splineRules();
+            }
+        }
+        else
         {
             FollowTarget();
             RotateCamera();
             CameraCollisions();
         }
-        else
-        {
-            splineRules();
-        }
+
     }
 
     public void Look(InputAction.CallbackContext context)

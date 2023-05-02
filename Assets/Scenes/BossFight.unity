@@ -3045,10 +3045,18 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9205203481537175224, guid: 5bd8b919e78b6e64499f691b8b5aab67, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 9205203483002829938, guid: 5bd8b919e78b6e64499f691b8b5aab67, type: 3}
       propertyPath: m_Name
       value: CameraManager
       objectReference: {fileID: 0}
+    - target: {fileID: 9205203483002829939, guid: 5bd8b919e78b6e64499f691b8b5aab67, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1398134194}
     - target: {fileID: 9205203483002829939, guid: 5bd8b919e78b6e64499f691b8b5aab67, type: 3}
       propertyPath: collisionLayers.m_Bits
       value: 65
@@ -5453,6 +5461,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6266512046117862126, guid: 55da9d451976e184c87beeba3280a476, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266512046117862126, guid: 55da9d451976e184c87beeba3280a476, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: 56642eab-4b3c-45a7-bff1-26f928f8de29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266512046117862126, guid: 55da9d451976e184c87beeba3280a476, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: Gameplay/Interact[/Keyboard/e,/XInputControllerWindows/buttonNorth]
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266512046117862126, guid: 55da9d451976e184c87beeba3280a476, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1398134193}
@@ -6147,12 +6167,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7736994330986778808, guid: 36aaa4c077a7a7f479a945ab2a5f434e, type: 3}
   m_PrefabInstance: {fileID: 1398134192}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1398134194}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cac961d29fc5474bb265a61a64aed5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1398134194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7736994330986681878, guid: 36aaa4c077a7a7f479a945ab2a5f434e, type: 3}
+  m_PrefabInstance: {fileID: 1398134192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1398134201 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7736994330986646070, guid: 36aaa4c077a7a7f479a945ab2a5f434e, type: 3}
