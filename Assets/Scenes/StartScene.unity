@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 1dc1d10915dbf1440abc0163cbe4df5c, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 95c8dbf04c74c344cb5e0d0f79945a60, type: 2}
 --- !u!1 &29475004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1036,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143000496}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &143000499
 Camera:
   m_ObjectHideFlags: 0
@@ -1298,7 +1298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185131823}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.9, y: 30.07, z: 0.24}
+  m_LocalPosition: {x: 41.9, y: 30.98, z: 0.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3085,6 +3085,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: RPG-Character
       objectReference: {fileID: 0}
+    - target: {fileID: 7736994330986778808, guid: 36aaa4c077a7a7f479a945ab2a5f434e, type: 3}
+      propertyPath: health
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7736994330986778808, guid: 36aaa4c077a7a7f479a945ab2a5f434e, type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 185131824}
     - target: {fileID: 7736994330986778808, guid: 36aaa4c077a7a7f479a945ab2a5f434e, type: 3}
       propertyPath: transitionOBJ
       value: 
@@ -9388,7 +9396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7991158102060877779, guid: 39a551d37a15c5c4d8e2871f80833d1c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.783949
+      value: 27.12
       objectReference: {fileID: 0}
     - target: {fileID: 7991158102060877779, guid: 39a551d37a15c5c4d8e2871f80833d1c, type: 3}
       propertyPath: m_LocalPosition.z
